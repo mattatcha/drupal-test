@@ -1,0 +1,16 @@
+drupal:
+  build: .
+  ports:
+    - "8080:80"
+  links:
+    - mysql
+  environment:
+    - DB_HOST=mysql:3306
+    - DB_USER=root
+    - DB_PASSWORD=my-secret-pw
+    - DB_NAME=drupal
+mysql:
+  image: mysql
+  environment:
+    - MYSQL_DATABASE=drupal
+    - MYSQL_ROOT_PASSWORD=my-secret-pw
