@@ -1,0 +1,5 @@
+name = testtheme
+description = test
+core = 6.x
+base theme = bartik
+stylesheets[all][] = testtheme.css
